@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.bg {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/static/bg.png'); 
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+nav {
+    padding: 1px 6%;
+    background-color: rgba(255, 255, 255, 0.319);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-shadow: 3px 3px 20px #066400, -2px 1px 30px #fff; 
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start .logo {
+    width: 70px;
+    padding: 10px;
+}
+
+.start .lname {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(223, 66, 66);
+}
+
+nav ul li {
+
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+} 
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.login {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg,rgb(105, 72, 223),rgb(118, 48, 215));
+    font-size: 14px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.login:hover {
+    background:rgb(80, 105, 250);
+    box-shadow: 0 0 20px;
+    transform: scale(1.1);
+
+}
+
+#menu-icon {
+    font-size: 34px;
+    color: #fff;
+    z-index: pointer;
+    cursor: pointer;
+}
+
+.content {
+    text-align: center;
+    margin-top: 5%;
+}
+
+h1{
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 45px;
+    color: #222;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 30px;
+    margin-top: 30px;
+    max-width: 600px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search > i {
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.search .sr {
+    flex: 1;
+    background-color: #fff;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+}
+
+.btn {
+    padding: 9px 15px;
+    color: #fff;
+    background-image: linear-gradient(45deg,rgb(105, 72, 223),rgb(118, 48, 215));
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background:rgb(80, 105, 250);
+    box-shadow: 0 0 20px;
+    transform: scale(1.1);
+
+}
+.box{
+    margin-bottom: 30px;
+}
+
+.resultbt{
+    margin-top: 10px;
+    padding: 20px;
+    background: #db743056;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background: #db743056;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+/* Chatbot Toggle Button */
+#chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4a49f9;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Chatbot Container */
+#chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+}
+
+/* Chat Header */
+.chat-header {
+    background: #4a49f9;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bot-logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    border-radius: 30% 30% 0% 30%;
+}
+
+#chatbot-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Chat Body */
+.chat-body {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background: #f4f4f4;
+}
+
+.bot-message, .user-message {
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    margin-bottom: 10px;
+}
+
+.bot-message {
+    background: #e0e0ff;
+    align-self: flex-start;
+}
+
+.user-message {
+    background: #4a49f9;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Quick Reply Buttons */
+.quick-buttons {
+    margin-top: 5px;
+}
+
+.quick-reply {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+/* Chat Footer */
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #ddd;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#send-btn {
+    background: #4a49f9;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#riddhi{
+
+
+    font-size:larger;
+}
